@@ -1,5 +1,10 @@
 /* app css stylesheet */
 
+body {
+  background-color: white;
+  font-family: 'Lato', sans-serif;
+}
+
 .menu {
   list-style: none;
   border-bottom: 0.1em solid black;
@@ -22,4 +27,133 @@
 .menu > li + li:before {
   content: "|";
   padding-right: 0.3em;
+}
+
+.top-bar {
+  height: 68px;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  top: 0;
+  background-color: white;
+}
+
+.nav-item {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.cart-promo {
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Category header CSS */
+.category-header-container {
+  position: relative;
+  margin-top: 68px;
+}
+
+.category-header-container .category-image {
+  width: 100%;
+}
+
+.category-description-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-left: 5px solid white;
+  border-right: 5px solid white;
+  background-color: #2B2B28;
+  color: white;
+  width: 50%;
+  margin: auto;
+  padding: 30px;
+}
+
+.category-description-container .category-title {
+  font-size: 24px;
+  border-bottom: 1px solid white;
+  padding: 5px;
+}
+
+.category-description-container .category-description {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.category-products-container {
+  padding: 50px;
+  padding-bottom: 0;
+}
+
+/* Product CSS */
+.product-container {
+  height: 265px;
+  margin-bottom: 40px;
+  font-size: 12px;
+  position: relative;
+}
+
+.product-container .product-action {
+  position: absolute;
+  display: none;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.product-container:hover {
+  opacity: 0.8;
+}
+
+.product-container:hover .product-action {
+  display: block;
+  margin: 45px 0;
+  height: 110px;
+}
+
+.product-container:hover .product-cta-btn {
+  background-color: #161618;
+  color: white;
+  height: 40px;
+  line-height: 40px;
+  opacity: 0.6;
+  border-radius: 1px;
+  text-align: center;
+  width: 50%;
+  font-weight: 600;
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 30px;
+  margin-left: auto;
+}
+
+.product-container:hover .product-cta-btn:hover {
+  opacity: 1.0;
+  cursor: pointer;
+}
+
+.product-container .product-image {
+  height: 200px;
+  width: 100%;
+}
+
+.product-container .product-brand {
+  color: #616562;
+}
+
+.product-container .product-title {
+  margin: 5px 0;
+  opacity: 0.7;
+  font-weight: 600;
+}
+
+.product-container .product-price {
+  color: #999999;
 }
