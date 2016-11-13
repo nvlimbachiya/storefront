@@ -1,15 +1,15 @@
 'use strict';
 
-angular.module('myApp').directive('viewOne', [
+angular.module('myApp').directive('categoryPage', [
   function() {
     return {
       restrict: 'E',
-      templateUrl: 'view1/view1.html',
-      controller: 'View1Ctrl',
+      templateUrl: 'category_page/category_page.html',
+      controller: 'CategoryPageController',
       controllerAs: '$ctrl'
     }
 }])
-.controller('View1Ctrl', [
+.controller('CategoryPageController', [
   'ProductDataService',
   'CartAPIService',
   function(ProductDataService, CartAPIService) {
