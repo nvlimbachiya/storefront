@@ -1,7 +1,7 @@
 'use strict';
 
 // Declare app level module which depends on views, and components
-angular.module('myApp', ['ngRoute'])
+angular.module('myApp', ['ngRoute', 'ngAnimate'])
 .config([
   '$locationProvider',
   '$routeProvider',
@@ -9,11 +9,11 @@ angular.module('myApp', ['ngRoute'])
     $locationProvider.hashPrefix('!');
 
     $routeProvider
-      .when('/view1', {
-        template: '<view-one></view-one>'
+      .when('/category_page', {
+        template: '<category-page></category-page>'
       })
       .otherwise({
-        redirectTo: '/view1'
+        redirectTo: '/category_page'
       });
   }
 ]);
