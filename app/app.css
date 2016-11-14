@@ -21,6 +21,10 @@ body {
   cursor: pointer;
 }
 
+.cart-preview-container {
+  position: relative;
+}
+
 .cart-preview {
   font-size: 14px;
   font-weight: 600;
@@ -42,12 +46,20 @@ body {
   padding: 10px;
 }
 
+.cart-popup-container {
+  width: 100%;
+}
+
 .cart-preview.is-clicked {
   outline: none;
   border-bottom: 1px solid black;
 }
 
 /* Category header CSS */
+.category-page-products {
+  background-color: white;
+}
+
 .category-header-container {
   position: relative;
   margin-top: 68px;
