@@ -1,3 +1,9 @@
+/*
+ * ProductDataService to return ProductListModel colletion as promise
+ */
+
+'use strict';
+
 angular.module('myApp').service('ProductDataService', [
   '$q',
   'ProductListModel',
@@ -47,6 +53,10 @@ angular.module('myApp').service('ProductDataService', [
       }
     ];
 
+    /*
+     * Get ProductListModel wrapped in a promise
+     * @returns {Promise}
+     */
     var getProducts = function() {
       var defer = $q.defer();
       defer.resolve(new ProductListModel(products));
