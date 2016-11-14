@@ -5,7 +5,6 @@ angular.module('myApp').service('CartAPIService', [
     var cartListModel = new CartListModel();
 
     var addProduct = function (product) {
-      console.log(product.title());
       cartListModel.addProduct(product);
       onCartUpdateCallbacks.forEach(function(cb) {
         cb();
@@ -20,9 +19,19 @@ angular.module('myApp').service('CartAPIService', [
       return cartListModel.getProductsInCart();
     };
 
+    var getItemsTotal = function() {
+      return cartListModel.getItemsTotal();
+    };
+
+    var getTotalPrice = function() {
+      return cartListModel.getTotalPrice();
+    };
+
     return {
       addProduct: addProduct,
       getProductsInCart: getProductsInCart,
+      getItemsTotal: getItemsTotal,
+      getTotalPrice: getTotalPrice,
       onCartUpdate: onCartUpdate
     }
   }
