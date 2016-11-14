@@ -1,0 +1,46 @@
+<div style="position: relative;">
+  <div
+    class="cart-preview"
+    data-ng-class="{'is-clicked': cartPopupCtrl.showPopup}"
+    data-ng-click="cartPopupCtrl.toggleCartPopup()">
+    MY CART ( {{cartPopupCtrl.itemsTotal}} )
+  </div>
+  <div class="cart-popup" data-ng-if="cartPopupCtrl.showPopup" layout="row">
+    <div layout="column" layout-align="space-between stretch" style="width: 100%;">
+      <div class="cart-popup-product-list-container">
+        <div data-ng-if="!cartPopupCtrl.productsInCart.length" layout="column">
+          <span>Your Shopping Cart is empty</span>
+        </div>
+        <div data-ng-if="cartPopupCtrl.productsInCart.length" layout="column">
+          <div data-ng-repeat="product in cartPopupCtrl.productsInCart" class="cart-popup-product-detail">
+            <div layout="row" layout-align="space-between start" flex>
+              <div flex="25">
+                <img src="assets/media/{{product.image()}}" alt="" class="product-image" />
+              </div>
+              <div flex="60">
+                <div class="cart-popup-product-title">{{product.title()}}</div>
+                <div class="cart-popup-product-quantity"><span>x<span> {{product.quantityInCart()}}</div>
+                <div class="cart-popup-product-brand">{{product.brand()}}</div>
+                <div class="cart-popup-product-price">${{product.price() * product.quantityInCart()}}</div>
+              </div>
+              <div flex="5">
+                X
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <md-divider></md-divider>
+        <div layout="row" layout-align="space-between center" class="cart-popup-totals">
+          <div>Total</div>
+          <div>${{cartPopupCtrl.totalPrice}}</div>
+        </div>
+        <div layout="row" layout-align="space-between center">
+          <div flex="45" class="cart-popup-btn view-cart-btn">VIEW CART</div>
+          <div flex="45" class="cart-popup-btn checkout-btn">CHECKOUT</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
