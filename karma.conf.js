@@ -9,7 +9,8 @@ module.exports = function(config) {
       'bower_components/angular-route/angular-route.js',
       'bower_components/angular-mocks/angular-mocks.js',
       'components/**/*.js',
-      'view*/**/*.js'
+      'category_page/**/*.js',
+      'cart_popup/**/*.js'
     ],
 
     autoWatch: true,

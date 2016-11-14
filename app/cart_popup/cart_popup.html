@@ -1,4 +1,4 @@
-<div style="position: relative;">
+<div class="cart-preview-container">
   <div
     class="cart-preview"
     data-ng-class="{'is-clicked': cartPopupCtrl.showPopup}"
@@ -6,7 +6,7 @@
     MY CART ( {{cartPopupCtrl.itemsTotal}} )
   </div>
   <div class="cart-popup" data-ng-if="cartPopupCtrl.showPopup" layout="row">
-    <div layout="column" layout-align="space-between stretch" style="width: 100%;">
+    <div layout="column" layout-align="space-between stretch" class="cart-popup-container">
       <div class="cart-popup-product-list-container">
         <div data-ng-if="!cartPopupCtrl.productsInCart.length" layout="column">
           <span>Your Shopping Cart is empty</span>
