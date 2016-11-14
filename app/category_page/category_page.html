@@ -34,6 +34,9 @@
   <div flex class="category-page-products">
     <div class="category-products-container" flex="80" flex-offset="10" layout="row" layout-align="space-between center" layout-wrap>
       <div flex="30" data-ng-repeat="product in $ctrl.products" class="product-container" layout="column" layout-align="space-between stretch">
+
+        <!--  START Product Directive   -->
+        <!--  This entire block can be converted into a directive that takes `product` as an argument  -->
         <div>
           <img src="assets/media/{{product.image()}}" alt="" class="product-image" />
         </div>
@@ -52,6 +55,9 @@
           <div class="product-cta-btn">VIEW DETAILS</div>
           <div class="product-cta-btn" data-ng-click="$ctrl.addToCart(product)">ADD TO CART</div>
         </div>
+
+        <!--  END Product Directive   -->
+
       </div>
     </div>
   </div>

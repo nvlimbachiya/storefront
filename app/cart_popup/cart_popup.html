@@ -13,6 +13,9 @@
         </div>
         <div data-ng-if="cartPopupCtrl.productsInCart.length" layout="column">
           <div data-ng-repeat="product in cartPopupCtrl.productsInCart" class="cart-popup-product-detail">
+
+            <!--  START Cart Product Details Directive   -->
+            <!--  This entire block can be converted into a directive that takes `product` as an argument  -->
             <div layout="row" layout-align="space-between start" flex>
               <div flex="25">
                 <img src="assets/media/{{product.image()}}" alt="" class="product-image" />
@@ -27,6 +30,9 @@
                 X
               </div>
             </div>
+
+            <!--  END Cart Product Details Directive   -->
+
           </div>
         </div>
       </div>
